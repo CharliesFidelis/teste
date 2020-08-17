@@ -1,0 +1,2514 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/14/2020 2:34:44 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="FABNBFIN02"
+  DTS:CreatorName="HYDRO\charlies.fidelis"
+  DTS:DTSID="{24A0ED10-2C75-4DF3-A07D-F7FE27803F72}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{72A0D6AD-E983-4C4E-A644-4436CF05F856}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\EXEL"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{12DFD6D1-1502-4946-8A2E-A9A36CB604D6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EXEL"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\EXEL\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Plan1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\EXEL\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="{4A4E36E6-BECF-4009-B4BB-001880B70528}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\EXEL\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[PRODUTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[PRODUTO]"
+                      length="255"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[PRODUTO]"
+                      name="PRODUTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[DT_MOVIMENTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[DT_MOVIMENTO]"
+                      length="255"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[DT_MOVIMENTO]"
+                      name="DT_MOVIMENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[QUANTIDADE]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[QUANTIDADE]"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[QUANTIDADE]"
+                      name="QUANTIDADE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[VALOR]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[VALOR]"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[VALOR]"
+                      name="VALOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[NoName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[NoName]"
+                      length="255"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[NoName]"
+                      name="NoName"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[PRODUTO]"
+                      dataType="wstr"
+                      length="255"
+                      name="PRODUTO" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[DT_MOVIMENTO]"
+                      dataType="wstr"
+                      length="255"
+                      name="DT_MOVIMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[QUANTIDADE]"
+                      dataType="r8"
+                      name="QUANTIDADE" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[VALOR]"
+                      dataType="r8"
+                      name="VALOR" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[F5]"
+                      dataType="wstr"
+                      length="255"
+                      name="F5" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[F6]"
+                      dataType="wstr"
+                      length="255"
+                      name="F6" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[F7]"
+                      dataType="wstr"
+                      length="255"
+                      name="F7" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[F8]"
+                      dataType="wstr"
+                      length="255"
+                      name="F8" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[F9]"
+                      dataType="wstr"
+                      length="255"
+                      name="F9" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[F10]"
+                      dataType="wstr"
+                      length="255"
+                      name="F10" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[F11]"
+                      dataType="wstr"
+                      length="255"
+                      name="F11" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[F12]"
+                      dataType="wstr"
+                      length="255"
+                      name="F12" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[F13]"
+                      dataType="wstr"
+                      length="255"
+                      name="F13" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Output].ExternalColumns[NoName]"
+                      dataType="wstr"
+                      length="255"
+                      name="NoName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[PRODUTO]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[PRODUTO]"
+                      name="PRODUTO" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[DT_MOVIMENTO]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[DT_MOVIMENTO]"
+                      name="DT_MOVIMENTO" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[QUANTIDADE]"
+                      dataType="r8"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[QUANTIDADE]"
+                      name="QUANTIDADE" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[VALOR]"
+                      dataType="r8"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[VALOR]"
+                      name="VALOR" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[NoName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[NoName]"
+                      name="NoName" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\EXEL\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TESTE_DW_EXCEL]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\EXEL\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{6386F0B0-0FAE-41D4-A169-87010B4E5482}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[192.168.4.69.mercanet_homol-2.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PRODUTO]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PRODUTO"
+                      externalMetadataColumnId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRODUTO]"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[PRODUTO]" />
+                    <inputColumn
+                      refId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DT_MOVIMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="DT_MOVIMENTO"
+                      externalMetadataColumnId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DT_MOVIMENTO]"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[DT_MOVIMENTO]" />
+                    <inputColumn
+                      refId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[QUANTIDADE]"
+                      cachedDataType="r8"
+                      cachedName="QUANTIDADE"
+                      externalMetadataColumnId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[QUANTIDADE]"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[QUANTIDADE]" />
+                    <inputColumn
+                      refId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[VALOR]"
+                      cachedDataType="r8"
+                      cachedName="VALOR"
+                      externalMetadataColumnId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VALOR]"
+                      lineageId="Package\EXEL\Excel Source.Outputs[Excel Source Output].Columns[VALOR]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRODUTO]"
+                      dataType="wstr"
+                      length="255"
+                      name="PRODUTO" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DT_MOVIMENTO]"
+                      dataType="wstr"
+                      length="255"
+                      name="DT_MOVIMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[QUANTIDADE]"
+                      dataType="r8"
+                      name="QUANTIDADE" />
+                    <externalMetadataColumn
+                      refId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VALOR]"
+                      dataType="r8"
+                      name="VALOR" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\EXEL\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\EXEL\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\EXEL\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\EXEL\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\EXEL\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\EXEL.Paths[Excel Source Output]"
+              endId="Package\EXEL\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\EXEL\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TESTE_DW_PRODUTO"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9C697059-5703-438B-B20A-F93A95288D03}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TESTE_DW_PRODUTO"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\TESTE_DW_PRODUTO\MERCANET"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="MERCANET"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [DB_PROD_CODIGO]
+      ,[DB_PROD_DESCRICAO]
+      ,[DB_PROD_UNID_MEDID]
+      ,[DB_PROD_GRUPO]
+      ,[DB_PROD_IPI]
+      ,[DB_PROD_QTDE_EMB]
+      ,[DB_PROD_FAMILIA]
+      ,[DB_PROD_SITUACAO]
+      ,[DB_PROD_PESO_BRU]
+      ,[DB_PROD_PESO_LIQ]
+      ,[DB_PROD_VOLUME]
+      ,[DB_PROD_SUBGRUPO]
+      ,[DB_PROD_CUSTO]
+      ,[DB_PROD_PRECO]
+      ,[DB_PROD_EMPRESAS]
+      ,[DB_PROD_REPRES]
+      ,[DB_PROD_CLASSIF]
+      ,[DB_PROD_VINCULO]
+      ,[DB_PROD_VINCFATOR]
+      ,[DB_PROD_TPVENDA]
+      ,[DB_PROD_CUSTO_MO]
+      ,[DB_PROD_COD_BARRA]
+      ,[DB_PROD_FCEST]
+      ,[DB_PROD_CLASFIS]
+      ,[DB_PROD_MARCA]
+      ,[DB_PROD_TPPROD]
+      ,[DB_PROD_TRIB_ICM]
+      ,[DB_PROD_NARRATIVA]
+      ,[DB_PROD_CUSTO_FIXO]
+      ,[DB_PROD_ULT_ALTER]
+      ,[DB_PROD_MODELO]
+      ,[DB_PROD_REFER]
+      ,[DB_PROD_CESTOQUE]
+      ,[DB_PROD_SUG_VENDA]
+      ,[DB_PROD_COMPL]
+      ,[DB_PROD_CONFIG]
+      ,[DB_PROD_RAMATIV]
+      ,[DB_PROD_ARQUIVO]
+      ,[DB_PROD_PMERCADO]
+      ,[DB_PROD_TEMCOMP]
+      ,[DB_PROD_MODDP]
+      ,[DB_PROD_COR]
+      ,[DB_PROD_FCEST1]
+      ,[DB_PROD_FCEST2]
+      ,[DB_PROD_FCEST3]
+      ,[DB_PROD_FCEST4]
+      ,[DB_PROD_ALT_CORP]
+  FROM [dbo].[DB_PRODUTO]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\TESTE_DW_PRODUTO\MERCANET.Connections[OleDbConnection]"
+                  connectionManagerID="{6386F0B0-0FAE-41D4-A169-87010B4E5482}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[192.168.4.69.mercanet_homol-2.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CODIGO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CODIGO]"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CODIGO]"
+                      name="DB_PROD_CODIGO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_DESCRICAO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_DESCRICAO]"
+                      length="50"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_DESCRICAO]"
+                      name="DB_PROD_DESCRICAO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_UNID_MEDID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_UNID_MEDID]"
+                      length="2"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_UNID_MEDID]"
+                      name="DB_PROD_UNID_MEDID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_GRUPO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_GRUPO]"
+                      length="8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_GRUPO]"
+                      name="DB_PROD_GRUPO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_IPI]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_IPI]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_IPI]"
+                      name="DB_PROD_IPI"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_QTDE_EMB]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_QTDE_EMB]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_QTDE_EMB]"
+                      name="DB_PROD_QTDE_EMB"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FAMILIA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FAMILIA]"
+                      length="8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FAMILIA]"
+                      name="DB_PROD_FAMILIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_SITUACAO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_SITUACAO]"
+                      length="1"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_SITUACAO]"
+                      name="DB_PROD_SITUACAO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PESO_BRU]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_PESO_BRU]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PESO_BRU]"
+                      name="DB_PROD_PESO_BRU"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PESO_LIQ]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_PESO_LIQ]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PESO_LIQ]"
+                      name="DB_PROD_PESO_LIQ"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_VOLUME]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_VOLUME]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_VOLUME]"
+                      name="DB_PROD_VOLUME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_SUBGRUPO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_SUBGRUPO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_SUBGRUPO]"
+                      name="DB_PROD_SUBGRUPO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CUSTO]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CUSTO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CUSTO]"
+                      name="DB_PROD_CUSTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PRECO]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_PRECO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PRECO]"
+                      name="DB_PROD_PRECO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_EMPRESAS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_EMPRESAS]"
+                      length="50"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_EMPRESAS]"
+                      name="DB_PROD_EMPRESAS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_REPRES]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_REPRES]"
+                      length="1024"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_REPRES]"
+                      name="DB_PROD_REPRES"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CLASSIF]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CLASSIF]"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CLASSIF]"
+                      name="DB_PROD_CLASSIF"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_VINCULO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_VINCULO]"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_VINCULO]"
+                      name="DB_PROD_VINCULO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_VINCFATOR]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_VINCFATOR]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_VINCFATOR]"
+                      name="DB_PROD_VINCFATOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TPVENDA]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_TPVENDA]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TPVENDA]"
+                      name="DB_PROD_TPVENDA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CUSTO_MO]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CUSTO_MO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CUSTO_MO]"
+                      name="DB_PROD_CUSTO_MO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_COD_BARRA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_COD_BARRA]"
+                      length="14"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_COD_BARRA]"
+                      name="DB_PROD_COD_BARRA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST]"
+                      name="DB_PROD_FCEST"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CLASFIS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CLASFIS]"
+                      length="10"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CLASFIS]"
+                      name="DB_PROD_CLASFIS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_MARCA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_MARCA]"
+                      length="4"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_MARCA]"
+                      name="DB_PROD_MARCA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TPPROD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_TPPROD]"
+                      length="4"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TPPROD]"
+                      name="DB_PROD_TPPROD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TRIB_ICM]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_TRIB_ICM]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TRIB_ICM]"
+                      name="DB_PROD_TRIB_ICM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_NARRATIVA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_NARRATIVA]"
+                      length="15"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_NARRATIVA]"
+                      name="DB_PROD_NARRATIVA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CUSTO_FIXO]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CUSTO_FIXO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CUSTO_FIXO]"
+                      name="DB_PROD_CUSTO_FIXO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_ULT_ALTER]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_ULT_ALTER]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_ULT_ALTER]"
+                      name="DB_PROD_ULT_ALTER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_MODELO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_MODELO]"
+                      length="6"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_MODELO]"
+                      name="DB_PROD_MODELO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_REFER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_REFER]"
+                      length="40"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_REFER]"
+                      name="DB_PROD_REFER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CESTOQUE]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CESTOQUE]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CESTOQUE]"
+                      name="DB_PROD_CESTOQUE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_SUG_VENDA]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_SUG_VENDA]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_SUG_VENDA]"
+                      name="DB_PROD_SUG_VENDA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_COMPL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_COMPL]"
+                      length="60"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_COMPL]"
+                      name="DB_PROD_COMPL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CONFIG]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CONFIG]"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CONFIG]"
+                      name="DB_PROD_CONFIG"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_RAMATIV]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_RAMATIV]"
+                      length="255"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_RAMATIV]"
+                      name="DB_PROD_RAMATIV"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_ARQUIVO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_ARQUIVO]"
+                      length="255"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_ARQUIVO]"
+                      name="DB_PROD_ARQUIVO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PMERCADO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_PMERCADO]"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PMERCADO]"
+                      name="DB_PROD_PMERCADO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TEMCOMP]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_TEMCOMP]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TEMCOMP]"
+                      name="DB_PROD_TEMCOMP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_MODDP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_MODDP]"
+                      length="6"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_MODDP]"
+                      name="DB_PROD_MODDP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_COR]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_COR]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_COR]"
+                      name="DB_PROD_COR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST1]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST1]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST1]"
+                      name="DB_PROD_FCEST1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST2]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST2]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST2]"
+                      name="DB_PROD_FCEST2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST3]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST3]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST3]"
+                      name="DB_PROD_FCEST3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST4]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST4]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST4]"
+                      name="DB_PROD_FCEST4"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_ALT_CORP]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_ALT_CORP]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_ALT_CORP]"
+                      name="DB_PROD_ALT_CORP"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CODIGO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_CODIGO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_DESCRICAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DB_PROD_DESCRICAO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_UNID_MEDID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DB_PROD_UNID_MEDID" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_GRUPO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="DB_PROD_GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_IPI]"
+                      dataType="r8"
+                      name="DB_PROD_IPI" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_QTDE_EMB]"
+                      dataType="r8"
+                      name="DB_PROD_QTDE_EMB" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FAMILIA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="DB_PROD_FAMILIA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_SITUACAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="DB_PROD_SITUACAO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_PESO_BRU]"
+                      dataType="r8"
+                      name="DB_PROD_PESO_BRU" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_PESO_LIQ]"
+                      dataType="r8"
+                      name="DB_PROD_PESO_LIQ" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_VOLUME]"
+                      dataType="r8"
+                      name="DB_PROD_VOLUME" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_SUBGRUPO]"
+                      dataType="i4"
+                      name="DB_PROD_SUBGRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CUSTO]"
+                      dataType="r8"
+                      name="DB_PROD_CUSTO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_PRECO]"
+                      dataType="r8"
+                      name="DB_PROD_PRECO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_EMPRESAS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DB_PROD_EMPRESAS" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_REPRES]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1024"
+                      name="DB_PROD_REPRES" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CLASSIF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_CLASSIF" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_VINCULO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_VINCULO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_VINCFATOR]"
+                      dataType="r8"
+                      name="DB_PROD_VINCFATOR" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_TPVENDA]"
+                      dataType="i2"
+                      name="DB_PROD_TPVENDA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CUSTO_MO]"
+                      dataType="r8"
+                      name="DB_PROD_CUSTO_MO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_COD_BARRA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      name="DB_PROD_COD_BARRA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CLASFIS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="DB_PROD_CLASFIS" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_MARCA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="DB_PROD_MARCA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_TPPROD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="DB_PROD_TPPROD" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_TRIB_ICM]"
+                      dataType="i2"
+                      name="DB_PROD_TRIB_ICM" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_NARRATIVA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="DB_PROD_NARRATIVA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CUSTO_FIXO]"
+                      dataType="r8"
+                      name="DB_PROD_CUSTO_FIXO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_ULT_ALTER]"
+                      dataType="dbTimeStamp"
+                      name="DB_PROD_ULT_ALTER" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_MODELO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="DB_PROD_MODELO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_REFER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="DB_PROD_REFER" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CESTOQUE]"
+                      dataType="i2"
+                      name="DB_PROD_CESTOQUE" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_SUG_VENDA]"
+                      dataType="i2"
+                      name="DB_PROD_SUG_VENDA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_COMPL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DB_PROD_COMPL" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_CONFIG]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_CONFIG" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_RAMATIV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="DB_PROD_RAMATIV" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_ARQUIVO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="DB_PROD_ARQUIVO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_PMERCADO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_PMERCADO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_TEMCOMP]"
+                      dataType="i2"
+                      name="DB_PROD_TEMCOMP" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_MODDP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="DB_PROD_MODDP" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_COR]"
+                      dataType="i4"
+                      name="DB_PROD_COR" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST1]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST1" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST2]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST2" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST3]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST3" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_FCEST4]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST4" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].ExternalColumns[DB_PROD_ALT_CORP]"
+                      dataType="dbTimeStamp"
+                      name="DB_PROD_ALT_CORP" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CODIGO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CODIGO]"
+                      name="DB_PROD_CODIGO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_DESCRICAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_DESCRICAO]"
+                      name="DB_PROD_DESCRICAO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_UNID_MEDID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_UNID_MEDID]"
+                      name="DB_PROD_UNID_MEDID" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_GRUPO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_GRUPO]"
+                      name="DB_PROD_GRUPO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_IPI]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_IPI]"
+                      name="DB_PROD_IPI" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_QTDE_EMB]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_QTDE_EMB]"
+                      name="DB_PROD_QTDE_EMB" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FAMILIA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FAMILIA]"
+                      name="DB_PROD_FAMILIA" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_SITUACAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_SITUACAO]"
+                      name="DB_PROD_SITUACAO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_PESO_BRU]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_PESO_BRU]"
+                      name="DB_PROD_PESO_BRU" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_PESO_LIQ]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_PESO_LIQ]"
+                      name="DB_PROD_PESO_LIQ" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_VOLUME]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_VOLUME]"
+                      name="DB_PROD_VOLUME" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_SUBGRUPO]"
+                      dataType="i4"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_SUBGRUPO]"
+                      name="DB_PROD_SUBGRUPO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CUSTO]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CUSTO]"
+                      name="DB_PROD_CUSTO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_PRECO]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_PRECO]"
+                      name="DB_PROD_PRECO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_EMPRESAS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_EMPRESAS]"
+                      name="DB_PROD_EMPRESAS" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_REPRES]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1024"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_REPRES]"
+                      name="DB_PROD_REPRES" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CLASSIF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CLASSIF]"
+                      name="DB_PROD_CLASSIF" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_VINCULO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_VINCULO]"
+                      name="DB_PROD_VINCULO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_VINCFATOR]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_VINCFATOR]"
+                      name="DB_PROD_VINCFATOR" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_TPVENDA]"
+                      dataType="i2"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_TPVENDA]"
+                      name="DB_PROD_TPVENDA" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CUSTO_MO]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CUSTO_MO]"
+                      name="DB_PROD_CUSTO_MO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_COD_BARRA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_COD_BARRA]"
+                      name="DB_PROD_COD_BARRA" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST]"
+                      name="DB_PROD_FCEST" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CLASFIS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CLASFIS]"
+                      name="DB_PROD_CLASFIS" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_MARCA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_MARCA]"
+                      name="DB_PROD_MARCA" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_TPPROD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_TPPROD]"
+                      name="DB_PROD_TPPROD" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_TRIB_ICM]"
+                      dataType="i2"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_TRIB_ICM]"
+                      name="DB_PROD_TRIB_ICM" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_NARRATIVA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_NARRATIVA]"
+                      name="DB_PROD_NARRATIVA" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CUSTO_FIXO]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CUSTO_FIXO]"
+                      name="DB_PROD_CUSTO_FIXO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_ULT_ALTER]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_ULT_ALTER]"
+                      name="DB_PROD_ULT_ALTER" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_MODELO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_MODELO]"
+                      name="DB_PROD_MODELO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_REFER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_REFER]"
+                      name="DB_PROD_REFER" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CESTOQUE]"
+                      dataType="i2"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CESTOQUE]"
+                      name="DB_PROD_CESTOQUE" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_SUG_VENDA]"
+                      dataType="i2"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_SUG_VENDA]"
+                      name="DB_PROD_SUG_VENDA" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_COMPL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_COMPL]"
+                      name="DB_PROD_COMPL" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CONFIG]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_CONFIG]"
+                      name="DB_PROD_CONFIG" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_RAMATIV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_RAMATIV]"
+                      name="DB_PROD_RAMATIV" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_ARQUIVO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_ARQUIVO]"
+                      name="DB_PROD_ARQUIVO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_PMERCADO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_PMERCADO]"
+                      name="DB_PROD_PMERCADO" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_TEMCOMP]"
+                      dataType="i2"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_TEMCOMP]"
+                      name="DB_PROD_TEMCOMP" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_MODDP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_MODDP]"
+                      name="DB_PROD_MODDP" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_COR]"
+                      dataType="i4"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_COR]"
+                      name="DB_PROD_COR" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST1]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST1]"
+                      name="DB_PROD_FCEST1" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST2]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST2]"
+                      name="DB_PROD_FCEST2" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST3]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST3]"
+                      name="DB_PROD_FCEST3" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST4]"
+                      dataType="r8"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_FCEST4]"
+                      name="DB_PROD_FCEST4" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_ALT_CORP]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[DB_PROD_ALT_CORP]"
+                      name="DB_PROD_ALT_CORP" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="TESTE_DW_PRODUTO"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TESTE_DW_PRODUTO]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Connections[OleDbConnection]"
+                  connectionManagerID="{6386F0B0-0FAE-41D4-A169-87010B4E5482}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[192.168.4.69.mercanet_homol-2.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_CODIGO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="DB_PROD_CODIGO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CODIGO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CODIGO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_DESCRICAO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DB_PROD_DESCRICAO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_DESCRICAO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_DESCRICAO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_UNID_MEDID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="DB_PROD_UNID_MEDID"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_UNID_MEDID]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_UNID_MEDID]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_GRUPO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="DB_PROD_GRUPO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_GRUPO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_GRUPO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_IPI]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_IPI"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_IPI]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_IPI]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_QTDE_EMB]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_QTDE_EMB"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_QTDE_EMB]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_QTDE_EMB]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_FAMILIA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="DB_PROD_FAMILIA"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FAMILIA]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FAMILIA]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_SITUACAO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="DB_PROD_SITUACAO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_SITUACAO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_SITUACAO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_PESO_BRU]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_PESO_BRU"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_PESO_BRU]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PESO_BRU]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_PESO_LIQ]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_PESO_LIQ"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_PESO_LIQ]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PESO_LIQ]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_VOLUME]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_VOLUME"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_VOLUME]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_VOLUME]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_SUBGRUPO]"
+                      cachedDataType="i4"
+                      cachedName="DB_PROD_SUBGRUPO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_SUBGRUPO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_SUBGRUPO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_CUSTO]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_CUSTO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CUSTO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CUSTO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_PRECO]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_PRECO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_PRECO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PRECO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_EMPRESAS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DB_PROD_EMPRESAS"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_EMPRESAS]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_EMPRESAS]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_REPRES]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1024"
+                      cachedName="DB_PROD_REPRES"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_REPRES]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_REPRES]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_CLASSIF]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="DB_PROD_CLASSIF"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CLASSIF]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CLASSIF]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_VINCULO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="DB_PROD_VINCULO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_VINCULO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_VINCULO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_VINCFATOR]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_VINCFATOR"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_VINCFATOR]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_VINCFATOR]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_TPVENDA]"
+                      cachedDataType="i2"
+                      cachedName="DB_PROD_TPVENDA"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_TPVENDA]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TPVENDA]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_CUSTO_MO]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_CUSTO_MO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CUSTO_MO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CUSTO_MO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_COD_BARRA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="DB_PROD_COD_BARRA"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_COD_BARRA]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_COD_BARRA]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_FCEST]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_FCEST"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_CLASFIS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="DB_PROD_CLASFIS"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CLASFIS]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CLASFIS]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_MARCA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="DB_PROD_MARCA"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_MARCA]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_MARCA]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_TPPROD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="DB_PROD_TPPROD"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_TPPROD]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TPPROD]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_TRIB_ICM]"
+                      cachedDataType="i2"
+                      cachedName="DB_PROD_TRIB_ICM"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_TRIB_ICM]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TRIB_ICM]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_NARRATIVA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="DB_PROD_NARRATIVA"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_NARRATIVA]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_NARRATIVA]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_CUSTO_FIXO]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_CUSTO_FIXO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CUSTO_FIXO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CUSTO_FIXO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_ULT_ALTER]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DB_PROD_ULT_ALTER"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_ULT_ALTER]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_ULT_ALTER]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_MODELO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="DB_PROD_MODELO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_MODELO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_MODELO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_REFER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="DB_PROD_REFER"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_REFER]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_REFER]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_CESTOQUE]"
+                      cachedDataType="i2"
+                      cachedName="DB_PROD_CESTOQUE"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CESTOQUE]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CESTOQUE]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_SUG_VENDA]"
+                      cachedDataType="i2"
+                      cachedName="DB_PROD_SUG_VENDA"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_SUG_VENDA]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_SUG_VENDA]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_COMPL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="DB_PROD_COMPL"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_COMPL]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_COMPL]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_CONFIG]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="DB_PROD_CONFIG"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CONFIG]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_CONFIG]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_RAMATIV]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="DB_PROD_RAMATIV"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_RAMATIV]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_RAMATIV]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_ARQUIVO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="DB_PROD_ARQUIVO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_ARQUIVO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_ARQUIVO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_PMERCADO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="DB_PROD_PMERCADO"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_PMERCADO]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_PMERCADO]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_TEMCOMP]"
+                      cachedDataType="i2"
+                      cachedName="DB_PROD_TEMCOMP"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_TEMCOMP]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_TEMCOMP]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_MODDP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="DB_PROD_MODDP"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_MODDP]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_MODDP]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_COR]"
+                      cachedDataType="i4"
+                      cachedName="DB_PROD_COR"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_COR]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_COR]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_FCEST1]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_FCEST1"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST1]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST1]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_FCEST2]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_FCEST2"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST2]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST2]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_FCEST3]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_FCEST3"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST3]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST3]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_FCEST4]"
+                      cachedDataType="r8"
+                      cachedName="DB_PROD_FCEST4"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST4]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_FCEST4]" />
+                    <inputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].Columns[DB_PROD_ALT_CORP]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DB_PROD_ALT_CORP"
+                      externalMetadataColumnId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_ALT_CORP]"
+                      lineageId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output].Columns[DB_PROD_ALT_CORP]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CODIGO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_CODIGO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_DESCRICAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DB_PROD_DESCRICAO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_UNID_MEDID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DB_PROD_UNID_MEDID" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_GRUPO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="DB_PROD_GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_IPI]"
+                      dataType="r8"
+                      name="DB_PROD_IPI" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_QTDE_EMB]"
+                      dataType="r8"
+                      name="DB_PROD_QTDE_EMB" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FAMILIA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="DB_PROD_FAMILIA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_SITUACAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="DB_PROD_SITUACAO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_PESO_BRU]"
+                      dataType="r8"
+                      name="DB_PROD_PESO_BRU" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_PESO_LIQ]"
+                      dataType="r8"
+                      name="DB_PROD_PESO_LIQ" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_VOLUME]"
+                      dataType="r8"
+                      name="DB_PROD_VOLUME" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_SUBGRUPO]"
+                      dataType="i4"
+                      name="DB_PROD_SUBGRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CUSTO]"
+                      dataType="r8"
+                      name="DB_PROD_CUSTO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_PRECO]"
+                      dataType="r8"
+                      name="DB_PROD_PRECO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_EMPRESAS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DB_PROD_EMPRESAS" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_REPRES]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1024"
+                      name="DB_PROD_REPRES" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CLASSIF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_CLASSIF" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_VINCULO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_VINCULO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_VINCFATOR]"
+                      dataType="r8"
+                      name="DB_PROD_VINCFATOR" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_TPVENDA]"
+                      dataType="i2"
+                      name="DB_PROD_TPVENDA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CUSTO_MO]"
+                      dataType="r8"
+                      name="DB_PROD_CUSTO_MO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_COD_BARRA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      name="DB_PROD_COD_BARRA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CLASFIS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="DB_PROD_CLASFIS" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_MARCA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="DB_PROD_MARCA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_TPPROD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="DB_PROD_TPPROD" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_TRIB_ICM]"
+                      dataType="i2"
+                      name="DB_PROD_TRIB_ICM" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_NARRATIVA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="DB_PROD_NARRATIVA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CUSTO_FIXO]"
+                      dataType="r8"
+                      name="DB_PROD_CUSTO_FIXO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_ULT_ALTER]"
+                      dataType="dbTimeStamp"
+                      name="DB_PROD_ULT_ALTER" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_MODELO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="DB_PROD_MODELO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_REFER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="DB_PROD_REFER" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CESTOQUE]"
+                      dataType="i2"
+                      name="DB_PROD_CESTOQUE" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_SUG_VENDA]"
+                      dataType="i2"
+                      name="DB_PROD_SUG_VENDA" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_COMPL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DB_PROD_COMPL" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_CONFIG]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_CONFIG" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_RAMATIV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="DB_PROD_RAMATIV" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_ARQUIVO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="DB_PROD_ARQUIVO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_PMERCADO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="DB_PROD_PMERCADO" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_TEMCOMP]"
+                      dataType="i2"
+                      name="DB_PROD_TEMCOMP" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_MODDP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="DB_PROD_MODDP" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_COR]"
+                      dataType="i4"
+                      name="DB_PROD_COR" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST1]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST1" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST2]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST2" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST3]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST3" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_FCEST4]"
+                      dataType="r8"
+                      name="DB_PROD_FCEST4" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DB_PROD_ALT_CORP]"
+                      dataType="dbTimeStamp"
+                      name="DB_PROD_ALT_CORP" />
+                    <externalMetadataColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[DT_ULT_ATUALIZACAO]"
+                      dataType="dbTimeStamp2"
+                      name="DT_ULT_ATUALIZACAO"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\TESTE_DW_PRODUTO.Paths[OLE DB Source Output]"
+              endId="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\TESTE_DW_PRODUTO\MERCANET.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE EXEL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D27D3E54-4F6D-46B9-87AA-D7A459C277B8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE EXEL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6386F0B0-0FAE-41D4-A169-87010B4E5482}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE TESTE_DW_EXCEL" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE MERCANET"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{33311F69-BE58-474F-A3DE-D900A58608BB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE MERCANET"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6386F0B0-0FAE-41D4-A169-87010B4E5482}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE TESTE_DW_PRODUTO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{93D43C83-2A9D-4D9A-83AD-24319B62D2F5}"
+      DTS:From="Package\TRUNCATE EXEL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\EXEL" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{359AABED-8C71-4BDD-AA68-2A7CCEC23926}"
+      DTS:From="Package\EXEL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\TRUNCATE MERCANET" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{78EF33E1-0E96-4593-83EC-10A550830C14}"
+      DTS:From="Package\TRUNCATE MERCANET"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\TESTE_DW_PRODUTO" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="204,42"
+          Id="Package\EXEL"
+          TopLeft="251,111" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\TRUNCATE EXEL"
+          TopLeft="251,34" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="353,76">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="204,42"
+          Id="Package\TRUNCATE MERCANET"
+          TopLeft="249,187" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\TESTE_DW_PRODUTO"
+          TopLeft="249,252" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="351,229">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="352,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\EXEL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\EXEL\Excel Source"
+          TopLeft="276,118" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\EXEL\OLE DB Destination"
+          TopLeft="276,206" />
+        <EdgeLayout
+          Id="Package\EXEL.Paths[Excel Source Output]"
+          TopLeft="364.5,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\EXEL\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\EXEL\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\TESTE_DW_PRODUTO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="200,42"
+          Id="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO"
+          TopLeft="274,161" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\TESTE_DW_PRODUTO\MERCANET"
+          TopLeft="274,92" />
+        <EdgeLayout
+          Id="Package\TESTE_DW_PRODUTO.Paths[OLE DB Source Output]"
+          TopLeft="374,134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\TESTE_DW_PRODUTO\TESTE_DW_PRODUTO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\TESTE_DW_PRODUTO\MERCANET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

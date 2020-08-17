@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="192.168.4.69.mercanet_homol-2.sa"
+  DTS:DTSID="{6386F0B0-0FAE-41D4-A169-87010B4E5482}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::_192168469Mercanet_homol2Sa_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=192.168.4.69;User ID=sa;Initial Catalog=mercanet_homol-2;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbfXCi4m6Ckeh3WQQd+OQjAAAAAACAAAAAAADZgAAwAAAABAAAADBOx1foieNZaJ8pfVSVErAAAAAAASAAACgAAAAEAAAAEil9jId/vCf03hNb1mRCt14AAAAWEhdNQqZoJyzR7dwwZsAkKb1UjK5FLo290kb7lPQExbRnDhPrrbbs7yAoOsvxU6aR80gNIWlWOq+ofMUj14J8M5pVGTWP7S2ELGFDJjx1rCWyLV7dqGCbqmfSsnxBFgX6LFJEJ/4hC+IrKo9pkenQQeyPZTc3RMYFAAAAFpMs78RplhpdUP8GbcUCvr+ZiGU</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
